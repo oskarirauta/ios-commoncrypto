@@ -2,5 +2,7 @@ framework module CommonCrypto [system] {
     umbrella header "CommonCrypto.h"
     header "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/CommonCrypto/CommonCrypto.h"
     header "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/CommonCrypto/CommonRandom.h"
+    header "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/CommonCrypto/CommonCryptor.h"
+    header "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/CommonCrypto/CommonHMAC.h"
     export *
 }
