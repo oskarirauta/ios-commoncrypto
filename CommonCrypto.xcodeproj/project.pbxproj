@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DA5398B1CD9161100F45446 /* iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA5398B1CD9161100F45446 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA5398E1CD9161100F45446 /* CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCrypto.h; sourceTree = "<group>"; };
 		2DA539901CD9161100F45446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD238641CDA33130008FB1A /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -23,8 +23,9 @@
 		2DD2386E1CDA33780008FB1A /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		2DD2386F1CDA33930008FB1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2DD238721CDA35880008FB1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2DD238791CDA380E0008FB1A /* Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD238791CDA380E0008FB1A /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD238821CDA396F0008FB1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6E617233212538C4002A02E1 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +62,8 @@
 		2DA5398C1CD9161100F45446 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2DA5398B1CD9161100F45446 /* iOS.framework */,
-				2DD238791CDA380E0008FB1A /* Mac.framework */,
+				2DA5398B1CD9161100F45446 /* CommonCrypto.framework */,
+				2DD238791CDA380E0008FB1A /* CommonCrypto.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA5398E1CD9161100F45446 /* CommonCrypto.h */,
+				6E617233212538C4002A02E1 /* CommonCrypto.xcconfig */,
 				2DA539901CD9161100F45446 /* Info.plist */,
 			);
 			path = CommonCrypto;
@@ -79,7 +81,7 @@
 		2DD238651CDA33160008FB1A /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				2DD2386B1CDA332B0008FB1A /* MacOS */,
+				2DD2386B1CDA332B0008FB1A /* osx */,
 				2DD2386A1CDA332A0008FB1A /* tvOS */,
 				2DD238671CDA33230008FB1A /* WatchOS */,
 				2DD238661CDA331E0008FB1A /* iOS */,
@@ -114,13 +116,13 @@
 			path = modules/tvos;
 			sourceTree = "<group>";
 		};
-		2DD2386B1CDA332B0008FB1A /* MacOS */ = {
+		2DD2386B1CDA332B0008FB1A /* osx */ = {
 			isa = PBXGroup;
 			children = (
 				2DD2386E1CDA33780008FB1A /* module.modulemap */,
 			);
-			name = MacOS;
-			path = modules/macos;
+			name = osx;
+			path = modules/osx;
 			sourceTree = "<group>";
 		};
 		2DD238711CDA33990008FB1A /* Frameworks */ = {
@@ -169,7 +171,7 @@
 			);
 			name = iOS;
 			productName = CommonCrypto;
-			productReference = 2DA5398B1CD9161100F45446 /* iOS.framework */;
+			productReference = 2DA5398B1CD9161100F45446 /* CommonCrypto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DD238781CDA380E0008FB1A /* Mac */ = {
@@ -187,7 +189,7 @@
 			);
 			name = Mac;
 			productName = CommonCrypto;
-			productReference = 2DD238791CDA380E0008FB1A /* Mac.framework */;
+			productReference = 2DD238791CDA380E0008FB1A /* CommonCrypto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +198,7 @@
 		2DA539821CD9161100F45446 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Bjarne Mogstad";
 				TargetAttributes = {
 					2DA5398A1CD9161100F45446 = {
@@ -262,6 +264,7 @@
 /* Begin XCBuildConfiguration section */
 		2DA539911CD9161100F45446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E617233212538C4002A02E1 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -269,13 +272,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -311,6 +324,7 @@
 		};
 		2DA539921CD9161100F45446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E617233212538C4002A02E1 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -318,13 +332,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -355,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -375,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

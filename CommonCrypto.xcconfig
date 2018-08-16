@@ -1,0 +1,9 @@
+//
+//  CommonCrypto.xcconfig
+//  ios-commoncrypto
+//
+
+MODULEMAP_FILE[sdk=iphoneos*] = $(SRCROOT)/modules/ios/module.modulemap
+MODULEMAP_FILE[sdk=watchos*] = $(SRCROOT)/modules/watchos/module.modulemap
+MODULEMAP_FILE[sdk=macosx*] = $(SRCROOT)/modules/osx/module.modulemap
+MODULEMAP_FILE[sdk=appletvos*] = $(SRCROOT)/modules/tvos/module.modulemap
