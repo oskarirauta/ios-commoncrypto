@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ios-commoncrypto"
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.license          = { :type => 'MIT', :text => 'MIT License' }
   s.summary          = 'CommmonCrypto module maps for Swift'
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.module_name = 'CommonCrypto'
   s.swift_version = '5.0'
-  s.ios.deployment_target = '12.2'
+  s.ios.deployment_target = '12.1'
   s.osx.deployment_target = '10.9'
 
   s.frameworks = 'Security'
